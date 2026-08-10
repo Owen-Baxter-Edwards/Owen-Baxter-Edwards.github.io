@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Owen Baxter Edwards — Data Analyst | Wake Forest MSBA</title>
+<meta name="description" content="Portfolio of Owen Baxter Edwards — Wake Forest MSBA candidate bridging quantitative economics and statistics into business analytics and data science.">
+<link rel="canonical" href="https://Owen-Baxter-Edwards.github.io/">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="32" fill="%23161616"/><text x="32" y="41" font-family="Georgia, Times New Roman, serif" font-size="26" font-weight="700" fill="%23d3ab5e" text-anchor="middle">OE</text></svg>" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   Owen Baxter Edwards — Portfolio (dark, single-file build)
+   ========================================================= */
+
+:root {
+  --bg: #0b0c0e;
+  --bg-soft: #111318;
+  --panel: #15171c;
+  --panel-hi: #1a1d23;
+  --border: #262a31;
+  --border-hi: #34383f;
+  --text: #ece8db;
+  --text-dim: #9c9a91;
+  --text-dimmer: #6c6a63;
+  --gold: #d3ab5e;
+  --gold-soft: #c9a24b;
+  --gold-deep: #a9822f;
+  --gold-wash: rgba(211, 171, 94, 0.1);
+  --radius: 12px;
+  --maxw: 980px;
+  --navh: 76px;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,0.045) 1px, transparent 1px) 0 0/22px 22px,
+    var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+::selection { background: var(--gold); color: #14120a; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+}
+
+h1, h2, h3, h4 { font-weight: 800; line-height: 1.12; margin: 0; color: var(--text); }
+
+h2.section-title {
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  margin: 0.35rem 0 1.7rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.7rem;
+}
+h2.section-title .num {
+  font-family: var(--font-mono);
+  color: var(--gold);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+h2.section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+  margin-left: 0.5rem;
+}
+
+p { margin: 0 0 1rem; color: var(--text-dim); }
+p:last-child { margin-bottom: 0; }
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 2.2rem;
+}
+
+/* ---------- Top Nav ---------- */
+.topnav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: var(--navh);
+  display: flex;
+  align-items: center;
+  background: rgba(11, 12, 14, 0.82);
+  backdrop-filter: blur(10px) saturate(140%);
+  border-bottom: 1px solid var(--border);
+}
+.topnav-inner {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+.brand .mark {
+  width: 34px; height: 34px;
+  border-radius: 9px;
+  background: linear-gradient(155deg, var(--gold) 0%, var(--gold-deep) 100%);
+  color: #14120a;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.85rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0; padding: 0;
+  flex-wrap: nowrap;
+}
+.nav-links a {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.02em;
+  color: var(--text-dim);
+  white-space: nowrap;
+  transition: color 0.2s ease;
+  padding: 0.3rem 0;
+  border-bottom: 1.5px solid transparent;
+}
+.nav-links a span { color: var(--gold); margin-right: 0.35rem; }
+.nav-links a:hover, .nav-links a.active { color: var(--text); border-color: var(--gold); }
+
+.nav-right { display: flex; align-items: center; gap: 0.9rem; flex-shrink: 0; }
+.role-pill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--gold);
+  border: 1px solid var(--gold-deep);
+  background: var(--gold-wash);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.nav-btn {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  border: 1.5px solid var(--gold);
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: 7px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+.nav-btn:hover { background: var(--gold); color: #14120a; }
+
+.nav-toggle-btn {
+  display: none;
+  width: 38px; height: 38px;
+  border: 1px solid var(--border-hi);
+  border-radius: 7px;
+  background: transparent;
+  color: var(--text);
+  align-items: center; justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.nav-toggle-btn svg { width: 18px; height: 18px; fill: currentColor; }
+
+#mobile-menu {
+  position: fixed;
+  top: var(--navh); left: 0; right: 0;
+  background: #0e0f12;
+  border-bottom: 1px solid var(--border);
+  z-index: 99;
+  max-height: 0;
+  overflow: hidden;
+  box-shadow: 0 20px 40px -20px rgba(0,0,0,0.6);
+  transition: max-height 0.25s ease;
+}
+#mobile-menu.open { max-height: 480px; }
+#mobile-menu ul { list-style: none; margin: 0; padding: 1rem 1.5rem 1.5rem; display: flex; flex-direction: column; gap: 0.2rem; }
+#mobile-menu a {
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  padding: 0.7rem 0.2rem;
+  border-bottom: 1px solid var(--border);
+}
+#mobile-menu a span { color: var(--gold); margin-right: 0.5rem; }
+#mobile-menu a.active { color: var(--gold); }
+
+/* ---------- Side rails (desktop only) ---------- */
+.rail { position: fixed; bottom: 0; z-index: 40; display: flex; flex-direction: column; align-items: center; }
+.rail-left { left: 2.6rem; }
+.rail-right { right: 2.6rem; }
+.rail::before { content: ""; width: 1px; height: 90px; background: var(--border-hi); }
+.rail-left::before { order: 2; margin-top: 1.1rem; }
+.rail-right::before { order: 2; margin-top: 1.1rem; }
+
+.rail-icons { display: flex; flex-direction: column; gap: 1.05rem; padding-bottom: 0; order: 1; }
+.rail-icons a { color: var(--text-dim); transition: color 0.2s ease, transform 0.2s ease; }
+.rail-icons a:hover { color: var(--gold); transform: translateY(-3px); }
+.rail-icons svg { width: 19px; height: 19px; fill: currentColor; }
+
+.rail-email {
+  order: 1;
+  writing-mode: vertical-rl;
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  transition: color 0.2s ease;
+}
+.rail-email:hover { color: var(--gold); }
+
+/* ---------- Hero ---------- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: var(--navh);
+}
+.hero .eyebrow { margin-bottom: 1.3rem; }
+.hero h1.big-name {
+  font-size: clamp(2.6rem, 6vw, 4.4rem);
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+.hero h2.big-line {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  color: var(--text);
+  max-width: 900px;
+  margin-bottom: 1.4rem;
+}
+.hero .lede {
+  max-width: 620px;
+  font-size: 1.05rem;
+  color: var(--text-dim);
+}
+.hero .status-line {
+  margin-top: 1.1rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--text-dimmer);
+}
+.hero .status-line b { color: var(--text-dim); font-weight: 500; }
+.hero .cta-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2.3rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  padding: 0.85rem 1.5rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--gold);
+  color: var(--text);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn:hover { background: var(--gold); color: #14120a; transform: translateY(-2px); }
+.btn.primary { background: var(--gold); color: #14120a; }
+.btn.primary:hover { background: var(--text); border-color: var(--text); }
+.btn.ghost { border-color: var(--border-hi); color: var(--text-dim); }
+.btn.ghost:hover { border-color: var(--gold); color: var(--text); background: transparent; }
+
+/* ---------- Sections ---------- */
+section.block { padding: 6rem 0 2.5rem; scroll-margin-top: calc(var(--navh) + 1.2rem); }
+
+.narrative-lead { font-size: 1.05rem; color: var(--text); max-width: 700px; }
+
+.bridge-map {
+  margin-top: 2.2rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--panel);
+}
+.bridge-row {
+  display: grid;
+  grid-template-columns: 1fr 34px 1fr;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 1.15rem 1.4rem;
+  border-bottom: 1px solid var(--border);
+}
+.bridge-row:last-child { border-bottom: none; }
+.bridge-row .from strong, .bridge-row .to strong { display: block; color: var(--text); font-size: 0.95rem; margin-bottom: 0.2rem; }
+.bridge-row .from span, .bridge-row .to span { color: var(--text-dimmer); font-size: 0.84rem; }
+.bridge-row .arrow { color: var(--gold); text-align: center; font-size: 1.1rem; }
+.bridge-head {
+  display: grid;
+  grid-template-columns: 1fr 34px 1fr;
+  padding: 0.85rem 1.4rem;
+  background: var(--panel-hi);
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ---------- Video ---------- */
+.video-frame {
+  margin-top: 1.6rem;
+  border-radius: var(--radius);
+  border: 1.5px dashed var(--border-hi);
+  background: repeating-linear-gradient(135deg, var(--panel), var(--panel) 10px, var(--panel-hi) 10px, var(--panel-hi) 20px);
+  aspect-ratio: 16/9;
+  max-width: 720px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.video-frame .play-badge {
+  width: 68px; height: 68px;
+  border-radius: 50%;
+  background: var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 0.9rem;
+}
+.video-frame .play-badge svg { width: 22px; height: 22px; fill: #14120a; margin-left: 3px; }
+.video-frame .placeholder-copy { text-align: center; color: var(--text-dim); padding: 0 1.5rem; }
+.video-frame .placeholder-copy strong { display: block; color: var(--text); font-size: 1rem; margin-bottom: 0.3rem; }
+.video-frame .placeholder-copy small { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dimmer); }
+.video-frame.is-video { border: 1px solid var(--border); background: #000; }
+.video-frame.is-video iframe, .video-frame.is-video video { width: 100%; height: 100%; border: 0; }
+.video-hint { margin-top: 0.9rem; font-size: 0.85rem; color: var(--text-dimmer); max-width: 640px; }
+.video-hint code { background: var(--panel-hi); border: 1px solid var(--border); color: var(--gold); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.8rem; }
+
+/* ---------- Resume ---------- */
+.resume-panel { border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); overflow: hidden; }
+.resume-toolbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 0.9rem 1.3rem; border-bottom: 1px solid var(--border); background: var(--panel-hi); flex-wrap: wrap;
+}
+.resume-toolbar .fname { font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-dim); }
+.resume-embed { width: 100%; height: 780px; border: 0; display: block; background: #1c1c1c; }
+.resume-embed-fallback { padding: 2.2rem 1.5rem; text-align: center; color: var(--text-dim); }
+.resume-embed-fallback a { color: var(--gold); }
+
+/* ---------- Experience ---------- */
+.timeline { margin-top: 1.4rem; }
+.tl-item { display: grid; grid-template-columns: 150px 1fr; gap: 1.4rem; padding: 1.4rem 0; border-bottom: 1px solid var(--border); }
+.tl-item:last-child { border-bottom: none; }
+.tl-date { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-dimmer); padding-top: 0.15rem; }
+.tl-role { font-size: 1.02rem; color: var(--text); margin-bottom: 0.15rem; }
+.tl-org { font-size: 0.88rem; color: var(--gold); font-weight: 600; margin-bottom: 0.6rem; }
+.tl-item ul { margin: 0; padding-left: 1.1rem; color: var(--text-dim); font-size: 0.94rem; }
+.tl-item li { margin-bottom: 0.35rem; }
+
+/* ---------- Projects ---------- */
+.project-card {
+  border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel);
+  margin-bottom: 1.8rem; overflow: hidden; transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+.project-card:hover { border-color: var(--gold-deep); transform: translateY(-3px); }
+
+.project-visual {
+  aspect-ratio: 16/6;
+  background: repeating-linear-gradient(135deg, var(--panel), var(--panel) 10px, var(--panel-hi) 10px, var(--panel-hi) 20px);
+  border-bottom: 1.5px dashed var(--border-hi);
+  display: flex; align-items: center; justify-content: center; text-align: center; padding: 1rem;
+}
+.project-visual span { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dimmer); }
+
+.project-body { padding: 1.6rem 1.7rem 1.8rem; }
+.project-body h3 { font-size: 1.15rem; margin-bottom: 0.2rem; color: var(--text); }
+.project-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0 1rem; }
+.tag { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.04em; color: var(--gold); background: var(--gold-wash); border: 1px solid var(--gold-deep); border-radius: 4px; padding: 0.2rem 0.55rem; }
+.project-body .field-label { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dimmer); margin: 1rem 0 0.25rem; }
+.project-body .field-label:first-of-type { margin-top: 1.1rem; }
+.project-body .outcome { background: var(--gold-wash); border-left: 3px solid var(--gold); padding: 0.7rem 0.9rem; border-radius: 0 6px 6px 0; font-size: 0.92rem; color: var(--text); }
+.project-links { margin-top: 1.1rem; display: flex; gap: 1rem; }
+.project-links a { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-dimmer); border-bottom: 1px dashed var(--border-hi); }
+.project-links a:hover { color: var(--gold); border-color: var(--gold); }
+
+/* ---------- Commercial Awareness ---------- */
+.insight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.8rem 0 2rem; }
+.stat-card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); padding: 1.3rem 1.2rem; }
+.stat-card .stat-num { font-family: var(--font-mono); font-size: 1.7rem; color: var(--gold); font-weight: 700; margin-bottom: 0.35rem; }
+.stat-card .stat-desc { font-size: 0.86rem; color: var(--text-dim); }
+
+.pillar { display: grid; grid-template-columns: 26px 1fr; gap: 0.9rem; margin-bottom: 1.3rem; }
+.pillar .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); margin-top: 0.55rem; }
+.pillar h4 { font-size: 1rem; margin-bottom: 0.3rem; color: var(--text); }
+.pillar p { font-size: 0.94rem; }
+
+.sources-note { margin-top: 1.8rem; font-size: 0.78rem; color: var(--text-dimmer); border-top: 1px solid var(--border); padding-top: 1rem; }
+.sources-note em { color: var(--text-dim); }
+
+/* ---------- Contact ---------- */
+.contact-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.6rem; }
+.contact-card {
+  flex: 1 1 220px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel);
+  padding: 1.4rem; display: flex; align-items: center; gap: 0.9rem; transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.contact-card:hover { border-color: var(--gold-deep); transform: translateY(-3px); }
+.contact-card .icon {
+  width: 40px; height: 40px; border-radius: 50%; background: var(--gold-wash); color: var(--gold);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 1px solid var(--gold-deep);
+}
+.contact-card .icon svg { width: 18px; height: 18px; fill: currentColor; }
+.contact-card strong { display: block; font-size: 0.95rem; color: var(--text); }
+.contact-card span { font-size: 0.84rem; color: var(--text-dimmer); }
+
+footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--text-dimmer); font-size: 0.8rem; font-family: var(--font-mono); }
+
+/* ---------- Back to top ---------- */
+.to-top {
+  position: fixed; right: 2rem; bottom: 2rem; z-index: 60;
+  width: 44px; height: 44px; border-radius: 50%;
+  border: 1.5px solid var(--gold-deep); background: rgba(11,12,14,0.85); backdrop-filter: blur(6px);
+  color: var(--gold); display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none; transform: translateY(8px);
+  transition: all 0.25s ease;
+}
+.to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.to-top:hover { background: var(--gold); color: #14120a; }
+.to-top svg { width: 18px; height: 18px; fill: currentColor; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1150px) {
+  .nav-links { display: none; }
+  .rail { display: none; }
+  .nav-toggle-btn { display: flex; }
+}
+
+@media (max-width: 640px) {
+  .container { padding: 0 1.3rem; }
+  .topnav-inner { padding: 0 1.2rem; }
+  .role-pill { display: none; }
+  .bridge-row, .bridge-head { grid-template-columns: 1fr; text-align: left; }
+  .bridge-row .arrow { display: none; }
+  .tl-item { grid-template-columns: 1fr; gap: 0.3rem; }
+  .insight-grid { grid-template-columns: 1fr; }
+  .resume-embed { height: 480px; }
+  .to-top { right: 1.2rem; bottom: 1.2rem; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ================= TOP NAV ================= -->
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a href="#top" class="brand"><span class="mark">OE</span> Owen Edwards</a>
+
+    <ul class="nav-links">
+      <li><a href="#about" class="nav-link"><span>01</span>About</a></li>
+      <li><a href="#video" class="nav-link"><span>02</span>Intro</a></li>
+      <li><a href="#resume" class="nav-link"><span>03</span>Résumé</a></li>
+      <li><a href="#experience" class="nav-link"><span>04</span>Experience</a></li>
+      <li><a href="#work" class="nav-link"><span>05</span>Work</a></li>
+      <li><a href="#insights" class="nav-link"><span>06</span>Insights</a></li>
+      <li><a href="#contact" class="nav-link"><span>07</span>Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <span class="role-pill">Data Analyst · MSBA</span>
+      <a href="#resume" class="nav-btn">Résumé</a>
+      <button class="nav-toggle-btn" id="nav-toggle-btn" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobile-menu">
+  <ul>
+    <li><a href="#about"><span>01</span>About</a></li>
+    <li><a href="#video"><span>02</span>Intro</a></li>
+    <li><a href="#resume"><span>03</span>Résumé</a></li>
+    <li><a href="#experience"><span>04</span>Experience</a></li>
+    <li><a href="#work"><span>05</span>Work</a></li>
+    <li><a href="#insights"><span>06</span>Insights</a></li>
+    <li><a href="#contact"><span>07</span>Contact</a></li>
+  </ul>
+</div>
+
+<!-- ================= SIDE RAILS (desktop) ================= -->
+<div class="rail rail-left">
+  <div class="rail-icons">
+    <a href="mailto:edwao26@wfu.edu" aria-label="Email">
+      <svg viewBox="0 0 24 24"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.2 7.8 5.6 7.8-5.6H4.2zm15.6 1.55-7.55 5.42a1 1 0 0 1-1.16 0L4.2 7.25V18h15.6V7.25z"/></svg>
+    </a>
+    <a href="https://linkedin.com/in/owen-baxter-edwards" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.68H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+    </a>
+    <a href="https://github.com/Owen-Baxter-Edwards" target="_blank" rel="noopener" aria-label="GitHub">
+      <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.66.5 12.02c0 5.09 3.29 9.41 7.86 10.94.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.47.11-3.06 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.77.12 3.06.74.8 1.19 1.83 1.19 3.09 0 4.43-2.7 5.4-5.27 5.69.42.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.56A10.53 10.53 0 0 0 23.5 12c0-6.36-5.15-11.5-11.5-11.5z"/></svg>
+    </a>
+  </div>
+</div>
+
+<div class="rail rail-right">
+  <a href="mailto:edwao26@wfu.edu" class="rail-email">edwao26@wfu.edu</a>
+</div>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main>
+  <div class="container">
+
+    <!-- ---------- HERO ---------- -->
+    <section class="hero" id="top">
+      <div class="eyebrow">Hi, my name is</div>
+      <h1 class="big-name">Owen Edwards.</h1>
+      <h2 class="big-line">I turn economic rigor into decisions data can defend.</h2>
+      <p class="lede">
+        Wake Forest University MSBA candidate with a foundation in quantitative economics and
+        statistics, now focused on business analytics, machine learning, and data storytelling.
+        I build evidence-based, decision-ready analysis — from disaster-response NLP models to
+        consumer-credit regressions — and communicate it clearly to non-technical stakeholders.
+      </p>
+      <div class="status-line">Winston-Salem, NC &nbsp;·&nbsp; <b>Open to relocation</b> &nbsp;·&nbsp; Open to data analyst &amp; business analytics roles</div>
+      <div class="cta-row">
+        <a href="#work" class="btn primary">View Work</a>
+        <a href="#resume" class="btn">Download Résumé</a>
+        <a href="#video" class="btn ghost">Watch Introduction</a>
+      </div>
+    </section>
+
+    <!-- ---------- 01 ABOUT / TRACK ALIGNMENT ---------- -->
+    <section class="block" id="about">
+      <h2 class="section-title"><span class="num">01</span>About &amp; Career Bridge</h2>
+
+      <p class="narrative-lead">
+        I came to analytics by way of economics, not around it. My undergraduate training in
+        quantitative economics and statistics at NC State taught me to ask rigorous causal
+        questions — why did credit delinquency move the way it did, why did informative signal
+        drop out of disaster Twitter data — and to answer them with data. The Wake Forest MSBA is
+        the deliberate next step: it takes that econometric foundation and points it at business
+        problems, teaching me the tools (Python, SQL, applied machine learning, stakeholder
+        communication) that let the same rigor drive commercial decisions, not just academic
+        papers. I'm not starting over in analytics; I'm translating.
+      </p>
+
+      <p>
+        That's the throughline of this hybrid track: everything below maps a skill I already built
+        in economics, research, or leadership onto the specific capability employers in data and
+        business analytics are hiring for right now.
+      </p>
+
+      <div class="bridge-map">
+        <div class="bridge-head"><div>Where I built it</div><div></div><div>Where it applies now</div></div>
+
+        <div class="bridge-row">
+          <div class="from"><strong>Quantitative Economics &amp; Statistics (B.S., NC State)</strong><span>First-differences regression, hypothesis testing, causal inference</span></div>
+          <div class="arrow">&#8594;</div>
+          <div class="to"><strong>Predictive &amp; Statistical Modeling for Business</strong><span>Applying regression and time-series methods to commercial questions like credit risk and demand</span></div>
+        </div>
+
+        <div class="bridge-row">
+          <div class="from"><strong>CADS Lab Research Assistant</strong><span>Built a CNN text classifier on Hurricane Helene Twitter data</span></div>
+          <div class="arrow">&#8594;</div>
+          <div class="to"><strong>Applied Machine Learning &amp; NLP</strong><span>Turning unstructured, noisy data into decision-ready signal — the same bottleneck most companies report today</span></div>
+        </div>
+
+        <div class="bridge-row">
+          <div class="from"><strong>Presenting to the CADS Lab Director &amp; faculty panels</strong><span>Translated model output into a plain-language 20-point finding</span></div>
+          <div class="arrow">&#8594;</div>
+          <div class="to"><strong>Stakeholder Communication &amp; Data Storytelling</strong><span>Making analysis legible to non-technical decision-makers — a named gap across the industry</span></div>
+        </div>
+
+        <div class="bridge-row">
+          <div class="from"><strong>VP, Data Analytics Club &amp; Pi Kappa Phi</strong><span>Grew membership 6x; managed a $10k+ budget and 50+ events</span></div>
+          <div class="arrow">&#8594;</div>
+          <div class="to"><strong>Cross-Functional Project &amp; Stakeholder Management</strong><span>Running analytics projects end-to-end alongside non-analyst stakeholders</span></div>
+        </div>
+
+        <div class="bridge-row">
+          <div class="from"><strong>Server, Sabatino's Italiano</strong><span>Managed 40+ concurrent clients nightly; ~22% avg. tip rate</span></div>
+          <div class="arrow">&#8594;</div>
+          <div class="to"><strong>Client-Facing Consulting Instincts</strong><span>Reading people, prioritizing under pressure, and building trust fast — core to analytics consulting</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- 02 VIDEO INTRODUCTION ---------- -->
+    <section class="block" id="video">
+      <h2 class="section-title"><span class="num">02</span>Video Introduction</h2>
+      <p>A 60&ndash;90 second walkthrough of who I am, what I work on, and what I'm looking for next.</p>
+
+      <!-- ============================================================
+           CUSTOMIZE ME — SWAP IN YOUR VIDEO:
+
+           Option A (YouTube/Vimeo embed) — replace this whole <div class="video-frame">
+           block with:
+             <div class="video-frame is-video">
+               <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                       title="Owen Edwards — Introduction" allowfullscreen></iframe>
+             </div>
+
+           Option B (self-hosted mp4) — add your file to /assets (e.g. assets/intro.mp4)
+           then replace this block with:
+             <div class="video-frame is-video">
+               <video controls poster="assets/video-poster.jpg">
+                 <source src="assets/intro.mp4" type="video/mp4">
+               </video>
+             </div>
+           ============================================================ -->
+      <div class="video-frame" id="video-slot">
+        <div class="placeholder-copy">
+          <div class="play-badge">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <strong>Video introduction — coming soon</strong>
+          <small>Replace this block in index.html once your intro video is recorded</small>
+        </div>
+      </div>
+      <p class="video-hint">To add your video later: open <code>index.html</code>, find the
+        <code>id="video-slot"</code> block, and follow the instructions left in the HTML comment
+        directly above it (YouTube/Vimeo embed or a self-hosted file in <code>/assets</code>).</p>
+    </section>
+
+    <!-- ---------- 03 RESUME ---------- -->
+    <section class="block" id="resume">
+      <h2 class="section-title"><span class="num">03</span>Résumé</h2>
+      <p>Viewable below, or grab the PDF directly — same file, screen-formatted for readability and print-ready for download.</p>
+
+      <div class="resume-panel">
+        <div class="resume-toolbar">
+          <span class="fname">Owen_Edwards_Resume.pdf</span>
+          <a href="Owen_Edwards_Resume.pdf" class="btn primary" download>&#8681; Download PDF</a>
+        </div>
+        <object data="Owen_Edwards_Resume.pdf" type="application/pdf" class="resume-embed">
+          <div class="resume-embed-fallback">
+            <p>Your browser can't preview PDFs inline.
+            <a href="Owen_Edwards_Resume.pdf" target="_blank" rel="noopener">Open the résumé in a new tab</a> instead.</p>
+          </div>
+        </object>
+      </div>
+    </section>
+
+    <!-- ---------- 04 EXPERIENCE ---------- -->
+    <section class="block" id="experience">
+      <h2 class="section-title"><span class="num">04</span>Experience</h2>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">Aug 2024 &ndash; May 2026</div>
+          <div>
+            <div class="tl-role">Research Assistant</div>
+            <div class="tl-org">Complexity, Analytics, and Data Science (CADS) Lab</div>
+            <ul>
+              <li>Collaborated with a team of 3 researchers analyzing Twitter data from the Hurricane Helene crisis, classifying tweets as informative or noninformative</li>
+              <li>Presented visualization results to the CADS Lab Director, communicating a 20 percentage-point drop in informative tweets across the response and recovery phases</li>
+              <li>Drafted the final research paper on extracting actionable information from Twitter during natural disaster events</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Aug 2024 &ndash; May 2026</div>
+          <div>
+            <div class="tl-role">Vice President</div>
+            <div class="tl-org">Data Analytics Club</div>
+            <ul>
+              <li>Orchestrated a semester-long initiative to differentiate the club with skill-building experiences, driving a 6-fold increase in membership</li>
+              <li>Directed a research project on AI &amp; the job market, presented to the Institute for Advanced Analytics faculty panel</li>
+              <li>Developed meeting presentations that improved engagement, earning a 90% member-satisfaction rating</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Jan 2023 &ndash; May 2026</div>
+          <div>
+            <div class="tl-role">Vice President</div>
+            <div class="tl-org">Pi Kappa Phi, Tau Chapter</div>
+            <ul>
+              <li>Managed a $10k+ budget and recruitment strategy across 50+ events while upholding chapter standards</li>
+              <li>Grew the chapter to 160+ members &mdash; the largest in NC at the time</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-date">Apr 2025 &ndash; Dec 2025</div>
+          <div>
+            <div class="tl-role">Server</div>
+            <div class="tl-org">Sabatino's Italiano</div>
+            <ul>
+              <li>Delivered attentive, accurate service to 40+ customers simultaneously in a fast-paced environment nightly</li>
+              <li>Cultivated genuine client relationships, driving a ~22% average tip rate</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------- 05 PROJECTS / WORK EVIDENCE ---------- -->
+    <section class="block" id="work">
+      <h2 class="section-title"><span class="num">05</span>Selected Work</h2>
+      <p>Three analytical projects spanning disaster-response NLP, consumer-credit econometrics, and sports-policy data engineering — each built end-to-end, from data collection to stakeholder-ready findings.</p>
+
+      <!-- Project 1 -->
+      <article class="project-card">
+        <div class="project-visual">
+          <!-- CUSTOMIZE ME: replace with <img src="assets/project1.png" alt="..."> once you have a chart/screenshot -->
+          <span>Add chart / screenshot &mdash; e.g. informative-vs-noninformative tweet trend</span>
+        </div>
+        <div class="project-body">
+          <h3>Hurricane Helene Twitter Informativeness Classification</h3>
+          <div class="project-meta">
+            <span class="tag">Python</span><span class="tag">CNN / NLP</span><span class="tag">Matplotlib</span><span class="tag">Pandas</span>
+          </div>
+
+          <div class="field-label">Context</div>
+          <p>During Hurricane Helene, emergency responders faced an overwhelming, unfiltered stream of
+            social media posts, making it hard to separate actionable information from noise in real time
+            &mdash; a version of the "data volume without data quality" problem that now ranks among the
+            top blockers to data-driven decision-making across industries.</p>
+
+          <div class="field-label">My Role</div>
+          <p>As one of 3 researchers in the CADS Lab, I built and trained a Convolutional Neural Network
+            (CNN) text classifier to label tweets as informative or noninformative, engineered comparative
+            visualizations in Python (Matplotlib, Pandas) across the disaster's response and recovery
+            phases, and co-authored the final research paper.</p>
+
+          <div class="field-label">Outcome</div>
+          <div class="outcome">Quantified a <strong>20 percentage-point drop</strong> in informative tweet
+            share between response and recovery phases &mdash; a concrete, presentable signal disaster-response
+            teams can use to recalibrate social-listening effort as a crisis unfolds.</div>
+
+          <div class="project-links">
+            <a href="#" aria-disabled="true">Write-up (add link)</a>
+            <a href="#" aria-disabled="true">GitHub repo (add link)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="project-card">
+        <div class="project-visual">
+          <span>Add chart / screenshot &mdash; e.g. delinquency vs. unemployment regression plot</span>
+        </div>
+        <div class="project-body">
+          <h3>Generational Credit Card Delinquency Analysis</h3>
+          <div class="project-meta">
+            <span class="tag">R</span><span class="tag">Regression</span><span class="tag">Federal Reserve Data</span>
+          </div>
+
+          <div class="field-label">Context</div>
+          <p>Rising and unevenly distributed consumer debt is a live concern for lenders and regulators
+            trying to price risk and design policy across generational cohorts.</p>
+
+          <div class="field-label">My Role</div>
+          <p>I independently sourced and cleaned multi-year datasets from several Federal Reserve credit
+            data resources, built a first-differences regression model isolating macroeconomic drivers of
+            delinquency, and visualized results by generational cohort.</p>
+
+          <div class="field-label">Outcome</div>
+          <div class="outcome">Found that <strong>unemployment rate and real disposable income</strong>
+            were statistically significant predictors of delinquency &mdash; with a materially larger
+            effect on younger generations &mdash; a finding directly relevant to consumer-credit risk
+            modeling and generational lending strategy.</div>
+
+          <div class="project-links">
+            <a href="#" aria-disabled="true">Write-up (add link)</a>
+            <a href="#" aria-disabled="true">GitHub repo (add link)</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="project-card">
+        <div class="project-visual">
+          <span>Add chart / screenshot &mdash; e.g. recruiting metrics before/after NIL</span>
+        </div>
+        <div class="project-body">
+          <h3>NCAA NIL Policy &amp; College Football Recruiting Analysis</h3>
+          <div class="project-meta">
+            <span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">Web Scraping</span><span class="tag">Excel</span>
+          </div>
+
+          <div class="field-label">Context</div>
+          <p>The NCAA's 2021 Name, Image, and Likeness (NIL) policy fundamentally changed the economics of
+            college athletics recruiting, but no ready-made structured dataset existed to study its effects.</p>
+
+          <div class="field-label">My Role</div>
+          <p>I designed and built a Selenium-based web scraper in Python to collect 2021&ndash;2025
+            recruiting data from 247Sports, then cleaned and structured it into a comprehensive Excel
+            dataset of key recruiting metrics &mdash; entirely self-directed, start to finish.</p>
+
+          <div class="field-label">Outcome</div>
+          <div class="outcome">Delivered a reusable, <strong>5-year longitudinal recruiting dataset</strong>
+            enabling trend analysis of how NIL reshaped recruiting patterns &mdash; demonstrating full-stack
+            data engineering skill: scraping, cleaning, and structuring data others hadn't yet assembled.</div>
+
+          <div class="project-links">
+            <a href="#" aria-disabled="true">Write-up (add link)</a>
+            <a href="#" aria-disabled="true">GitHub repo (add link)</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ---------- 06 COMMERCIAL AWARENESS ---------- -->
+    <section class="block" id="insights">
+      <h2 class="section-title"><span class="num">06</span>Industry Lens</h2>
+      <p>Commercial awareness I bring into every project &mdash; a working read on where the analytics
+        industry actually stands right now, not just the tools it uses.</p>
+
+      <div class="insight-grid">
+        <div class="stat-card">
+          <div class="stat-num">89%</div>
+          <div class="stat-desc">of organizations already using AI report inaccurate or misleading
+            outputs &mdash; the constraint is data quality, not model access.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">19%</div>
+          <div class="stat-desc">of the average enterprise's data is effectively inaccessible, trapped
+            across a reported 897 disconnected applications.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">$303B</div>
+          <div class="stat-desc">projected size of the data analytics market by 2030, with SQL, Python,
+            and Excel remaining the most-requested core skills.</div>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div class="dot"></div>
+        <div>
+          <h4>The gap is data quality, not appetite</h4>
+          <p>84% of technical leaders say their data strategy needs a full overhaul to support AI
+            initiatives, and nearly half of analytics leaders admit their teams occasionally draw
+            incorrect conclusions from poor business context. That's why every project I take on starts
+            with understanding the data-generating process, not just fitting a model to it.</p>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div class="dot"></div>
+        <div>
+          <h4>Insight is worthless if it isn't communicated</h4>
+          <p>Only 49% of organizations say they can reliably generate timely insights from their data.
+            I treat stakeholder communication &mdash; the same skill I used presenting to the CADS Lab
+            Director and the Institute for Advanced Analytics faculty panel &mdash; as part of the
+            analysis itself, not an afterthought.</p>
+        </div>
+      </div>
+
+      <div class="pillar">
+        <div class="dot"></div>
+        <div>
+          <h4>Entry-level analytics is a real, growing market</h4>
+          <p>39.3% of current data analyst openings target entry-level candidates, concentrated in IT
+            services/consulting, software, and financial services &mdash; exactly the kind of
+            cross-industry, business-facing work my hybrid economics-to-analytics background is built for.</p>
+        </div>
+      </div>
+
+      <div class="sources-note">
+        Sources: Salesforce, <em>2026 Data &amp; Analytics Trends</em> report; 365 Data Science,
+        <em>Data Analyst Job Outlook 2026</em>. Figures current as of August 2026 &mdash;
+        <!-- CUSTOMIZE ME: refresh these stats periodically so this section stays current -->
+        revisit and refresh periodically.
+      </div>
+    </section>
+
+    <!-- ---------- 07 CONTACT ---------- -->
+    <section class="block" id="contact">
+      <h2 class="section-title"><span class="num">07</span>Contact</h2>
+      <p>Open to data analyst, business analyst, and analytics-consulting roles &amp; internships.
+        The fastest way to reach me is email or LinkedIn.</p>
+
+      <div class="contact-row">
+        <a class="contact-card" href="mailto:edwao26@wfu.edu">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.2 7.8 5.6 7.8-5.6H4.2zm15.6 1.55-7.55 5.42a1 1 0 0 1-1.16 0L4.2 7.25V18h15.6V7.25z"/></svg></span>
+          <span><strong>Email</strong><span>edwao26@wfu.edu</span></span>
+        </a>
+        <a class="contact-card" href="https://linkedin.com/in/owen-baxter-edwards" target="_blank" rel="noopener">
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.15 1.45-2.15 2.94v5.68H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></span>
+          <span><strong>LinkedIn</strong><span>/in/owen-baxter-edwards</span></span>
+        </a>
+        <a class="contact-card" href="Owen_Edwards_Resume.pdf" download>
+          <span class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a1 1 0 0 1 1 1v10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.4l3.3 3.3V3a1 1 0 0 1 1-1zM4 20a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1z"/></svg></span>
+          <span><strong>Résumé</strong><span>Download PDF</span></span>
+        </a>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      &copy; <span id="year"></span> Owen Baxter Edwards &middot; Built with HTML, CSS &amp; JS &middot; Hosted on GitHub Pages
+    </footer>
+
+  </div>
+</main>
+
+<button class="to-top" id="to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // ---- Mobile nav toggle ----
+  const toggleBtn = document.getElementById('nav-toggle-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (toggleBtn && mobileMenu) {
+    toggleBtn.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+    });
+  }
+
+  // ---- Scroll-spy on top nav ----
+  const navLinks = Array.from(document.querySelectorAll('.nav-links a, #mobile-menu a'));
+  const sections = Array.from(new Set(navLinks.map(l => l.getAttribute('href'))))
+    .map(href => document.querySelector(href))
+    .filter(Boolean);
+
+  if ('IntersectionObserver' in window && sections.length) {
+    const setActive = (id) => {
+      navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${id}`));
+    };
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter(e => e.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+      if (visible.length) setActive(visible[0].target.id);
+    }, { rootMargin: '-20% 0px -65% 0px', threshold: 0 });
+    sections.forEach(s => observer.observe(s));
+  }
+
+  // ---- Back to top ----
+  const toTop = document.getElementById('to-top');
+  if (toTop) {
+    window.addEventListener('scroll', () => {
+      toTop.classList.toggle('visible', window.scrollY > window.innerHeight * 0.6);
+    }, { passive: true });
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+});
+
+</script>
+</body>
+</html>
