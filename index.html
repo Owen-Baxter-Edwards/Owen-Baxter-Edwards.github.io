@@ -6,7 +6,6 @@
 <title>Owen Baxter Edwards — Data Analyst | Wake Forest MSBA</title>
 <meta name="description" content="Portfolio of Owen Baxter Edwards — Wake Forest MSBA candidate bridging quantitative economics and statistics into business analytics and data science.">
 <link rel="canonical" href="https://Owen-Baxter-Edwards.github.io/">
-
 <link rel="icon" href="data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="32" fill="%23161616"/><text x="32" y="41" font-family="Georgia, Times New Roman, serif" font-size="26" font-weight="700" fill="%23d3ab5e" text-anchor="middle">OE</text></svg>" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,7 +14,6 @@
 /* =========================================================
    Owen Baxter Edwards — Portfolio (dark, single-file build)
    ========================================================= */
-
 :root {
   --bg: #0b0c0e;
   --bg-soft: #111318;
@@ -36,10 +34,8 @@
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
-
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-
 body {
   margin: 0;
   font-family: var(--font-sans);
@@ -50,12 +46,9 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
-
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
-
 ::selection { background: var(--gold); color: #14120a; }
-
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 0.78rem;
@@ -64,9 +57,7 @@ a { color: inherit; text-decoration: none; }
   color: var(--gold);
   font-weight: 600;
 }
-
 h1, h2, h3, h4 { font-weight: 800; line-height: 1.12; margin: 0; color: var(--text); }
-
 h2.section-title {
   font-size: clamp(1.4rem, 2.2vw, 1.8rem);
   margin: 0.35rem 0 1.7rem;
@@ -87,16 +78,13 @@ h2.section-title::after {
   background: var(--border);
   margin-left: 0.5rem;
 }
-
 p { margin: 0 0 1rem; color: var(--text-dim); }
 p:last-child { margin-bottom: 0; }
-
 .container {
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 0 2.2rem;
 }
-
 /* ---------- Top Nav ---------- */
 .topnav {
   position: fixed;
@@ -137,7 +125,6 @@ p:last-child { margin-bottom: 0; }
   display: flex; align-items: center; justify-content: center;
   font-weight: 800; font-size: 0.85rem;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -157,7 +144,6 @@ p:last-child { margin-bottom: 0; }
 }
 .nav-links a span { color: var(--gold); margin-right: 0.35rem; }
 .nav-links a:hover, .nav-links a.active { color: var(--text); border-color: var(--gold); }
-
 .nav-right { display: flex; align-items: center; gap: 0.9rem; flex-shrink: 0; }
 .role-pill {
   font-family: var(--font-mono);
@@ -180,7 +166,6 @@ p:last-child { margin-bottom: 0; }
   transition: all 0.2s ease;
 }
 .nav-btn:hover { background: var(--gold); color: #14120a; }
-
 .nav-toggle-btn {
   display: none;
   width: 38px; height: 38px;
@@ -193,7 +178,6 @@ p:last-child { margin-bottom: 0; }
   flex-shrink: 0;
 }
 .nav-toggle-btn svg { width: 18px; height: 18px; fill: currentColor; }
-
 #mobile-menu {
   position: fixed;
   top: var(--navh); left: 0; right: 0;
@@ -216,7 +200,6 @@ p:last-child { margin-bottom: 0; }
 }
 #mobile-menu a span { color: var(--gold); margin-right: 0.5rem; }
 #mobile-menu a.active { color: var(--gold); }
-
 /* ---------- Side rails (desktop only) ---------- */
 .rail { position: fixed; bottom: 0; z-index: 40; display: flex; flex-direction: column; align-items: center; }
 .rail-left { left: 2.6rem; }
@@ -224,12 +207,10 @@ p:last-child { margin-bottom: 0; }
 .rail::before { content: ""; width: 1px; height: 90px; background: var(--border-hi); }
 .rail-left::before { order: 2; margin-top: 1.1rem; }
 .rail-right::before { order: 2; margin-top: 1.1rem; }
-
 .rail-icons { display: flex; flex-direction: column; gap: 1.05rem; padding-bottom: 0; order: 1; }
 .rail-icons a { color: var(--text-dim); transition: color 0.2s ease, transform 0.2s ease; }
 .rail-icons a:hover { color: var(--gold); transform: translateY(-3px); }
 .rail-icons svg { width: 19px; height: 19px; fill: currentColor; }
-
 .rail-email {
   order: 1;
   writing-mode: vertical-rl;
@@ -240,7 +221,6 @@ p:last-child { margin-bottom: 0; }
   transition: color 0.2s ease;
 }
 .rail-email:hover { color: var(--gold); }
-
 /* ---------- Hero ---------- */
 .hero {
   min-height: 100vh;
@@ -279,7 +259,6 @@ p:last-child { margin-bottom: 0; }
   margin-top: 2.3rem;
   flex-wrap: wrap;
 }
-
 .btn {
   display: inline-flex;
   align-items: center;
@@ -300,12 +279,9 @@ p:last-child { margin-bottom: 0; }
 .btn.primary:hover { background: var(--text); border-color: var(--text); }
 .btn.ghost { border-color: var(--border-hi); color: var(--text-dim); }
 .btn.ghost:hover { border-color: var(--gold); color: var(--text); background: transparent; }
-
 /* ---------- Sections ---------- */
 section.block { padding: 6rem 0 2.5rem; scroll-margin-top: calc(var(--navh) + 1.2rem); }
-
 .narrative-lead { font-size: 1.05rem; color: var(--text); max-width: 700px; }
-
 .bridge-map {
   margin-top: 2.2rem;
   border: 1px solid var(--border);
@@ -336,7 +312,6 @@ section.block { padding: 6rem 0 2.5rem; scroll-margin-top: calc(var(--navh) + 1.
   text-transform: uppercase;
   color: var(--gold);
 }
-
 /* ---------- Video ---------- */
 .video-frame {
   margin-top: 1.6rem;
@@ -364,9 +339,9 @@ section.block { padding: 6rem 0 2.5rem; scroll-margin-top: calc(var(--navh) + 1.
 .video-frame .placeholder-copy small { font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-dimmer); }
 .video-frame.is-video { border: 1px solid var(--border); background: #000; }
 .video-frame.is-video iframe, .video-frame.is-video video { width: 100%; height: 100%; border: 0; }
+.video-frame.is-short { aspect-ratio: 9/16; max-width: 380px; }
 .video-hint { margin-top: 0.9rem; font-size: 0.85rem; color: var(--text-dimmer); max-width: 640px; }
 .video-hint code { background: var(--panel-hi); border: 1px solid var(--border); color: var(--gold); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.8rem; }
-
 /* ---------- Resume ---------- */
 .resume-panel { border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); overflow: hidden; }
 .resume-toolbar {
@@ -377,7 +352,6 @@ section.block { padding: 6rem 0 2.5rem; scroll-margin-top: calc(var(--navh) + 1.
 .resume-embed { width: 100%; height: 780px; border: 0; display: block; background: #1c1c1c; }
 .resume-embed-fallback { padding: 2.2rem 1.5rem; text-align: center; color: var(--text-dim); }
 .resume-embed-fallback a { color: var(--gold); }
-
 /* ---------- Experience ---------- */
 .timeline { margin-top: 1.4rem; }
 .tl-item { display: grid; grid-template-columns: 150px 1fr; gap: 1.4rem; padding: 1.4rem 0; border-bottom: 1px solid var(--border); }
@@ -387,14 +361,12 @@ section.block { padding: 6rem 0 2.5rem; scroll-margin-top: calc(var(--navh) + 1.
 .tl-org { font-size: 0.88rem; color: var(--gold); font-weight: 600; margin-bottom: 0.6rem; }
 .tl-item ul { margin: 0; padding-left: 1.1rem; color: var(--text-dim); font-size: 0.94rem; }
 .tl-item li { margin-bottom: 0.35rem; }
-
 /* ---------- Projects ---------- */
 .project-card {
   border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel);
   margin-bottom: 1.8rem; overflow: hidden; transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
 }
 .project-card:hover { border-color: var(--gold-deep); transform: translateY(-3px); }
-
 .project-visual {
   aspect-ratio: 16/6;
   background: repeating-linear-gradient(135deg, var(--panel), var(--panel) 10px, var(--panel-hi) 10px, var(--panel-hi) 20px);
@@ -402,7 +374,14 @@ section.block { padding: 6rem 0 2.5rem; scroll-margin-top: calc(var(--navh) + 1.
   display: flex; align-items: center; justify-content: center; text-align: center; padding: 1rem;
 }
 .project-visual span { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-dimmer); }
-
+.project-visual.has-image { background: #fff; padding: 0.6rem; }
+.project-visual.has-image img { width: 100%; height: 100%; object-fit: contain; }
+.project-visual.two-up { aspect-ratio: 16/8; gap: 0.7rem; align-items: stretch; }
+.project-visual.two-up img { flex: 1 1 0; width: 0; min-width: 0; height: 100%; min-height: 0; object-fit: contain; }
+@media (max-width: 640px) {
+  .project-visual.two-up { aspect-ratio: 9/14; flex-direction: column; }
+  .project-visual.two-up img { flex: 1 1 0; width: 100%; min-width: 0; height: 0; min-height: 0; object-fit: contain; }
+}
 .project-body { padding: 1.6rem 1.7rem 1.8rem; }
 .project-body h3 { font-size: 1.15rem; margin-bottom: 0.2rem; color: var(--text); }
 .project-meta { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0 1rem; }
@@ -413,7 +392,6 @@ section.block { padding: 6rem 0 2.5rem; scroll-margin-top: calc(var(--navh) + 1.
 .project-links { margin-top: 1.1rem; display: flex; gap: 1rem; }
 .project-links a { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-dimmer); border-bottom: 1px dashed var(--border-hi); }
 .project-links a:hover { color: var(--gold); border-color: var(--gold); }
-
 /* ---------- Contact ---------- */
 .contact-row { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.6rem; }
 .contact-card {
@@ -428,9 +406,7 @@ section.block { padding: 6rem 0 2.5rem; scroll-margin-top: calc(var(--navh) + 1.
 .contact-card .icon svg { width: 18px; height: 18px; fill: currentColor; }
 .contact-card strong { display: block; font-size: 0.95rem; color: var(--text); }
 .contact-card span { font-size: 0.84rem; color: var(--text-dimmer); }
-
 footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--text-dimmer); font-size: 0.8rem; font-family: var(--font-mono); }
-
 /* ---------- Back to top ---------- */
 .to-top {
   position: fixed; right: 2rem; bottom: 2rem; z-index: 60;
@@ -443,14 +419,12 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
 .to-top.visible { opacity: 1; pointer-events: auto; transform: translateY(0); }
 .to-top:hover { background: var(--gold); color: #14120a; }
 .to-top svg { width: 18px; height: 18px; fill: currentColor; }
-
 /* ---------- Responsive ---------- */
 @media (max-width: 1150px) {
   .nav-links { display: none; }
   .rail { display: none; }
   .nav-toggle-btn { display: flex; }
 }
-
 @media (max-width: 640px) {
   .container { padding: 0 1.3rem; }
   .topnav-inner { padding: 0 1.2rem; }
@@ -458,20 +432,16 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
   .bridge-row, .bridge-head { grid-template-columns: 1fr; text-align: left; }
   .bridge-row .arrow { display: none; }
   .tl-item { grid-template-columns: 1fr; gap: 0.3rem; }
-  .insight-grid { grid-template-columns: 1fr; }
   .resume-embed { height: 480px; }
   .to-top { right: 1.2rem; bottom: 1.2rem; }
 }
-
 </style>
 </head>
 <body>
-
 <!-- ================= TOP NAV ================= -->
 <nav class="topnav">
   <div class="topnav-inner">
     <a href="#top" class="brand"><span class="mark">OE</span> Owen Edwards</a>
-
     <ul class="nav-links">
       <li><a href="#about" class="nav-link"><span>01</span>About</a></li>
       <li><a href="#video" class="nav-link"><span>02</span>Intro</a></li>
@@ -480,7 +450,6 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
       <li><a href="#work" class="nav-link"><span>05</span>Work</a></li>
       <li><a href="#contact" class="nav-link"><span>06</span>Contact</a></li>
     </ul>
-
     <div class="nav-right">
       <span class="role-pill">Data Analyst · MSBA</span>
       <a href="#resume" class="nav-btn">Résumé</a>
@@ -490,7 +459,6 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
     </div>
   </div>
 </nav>
-
 <div id="mobile-menu">
   <ul>
     <li><a href="#about"><span>01</span>About</a></li>
@@ -501,7 +469,6 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
     <li><a href="#contact"><span>06</span>Contact</a></li>
   </ul>
 </div>
-
 <!-- ================= SIDE RAILS (desktop) ================= -->
 <div class="rail rail-left">
   <div class="rail-icons">
@@ -516,15 +483,12 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
     </a>
   </div>
 </div>
-
 <div class="rail rail-right">
   <a href="mailto:edwao26@wfu.edu" class="rail-email">edwao26@wfu.edu</a>
 </div>
-
 <!-- ================= MAIN CONTENT ================= -->
 <main>
   <div class="container">
-
     <!-- ---------- HERO ---------- -->
     <section class="hero" id="top">
       <div class="eyebrow">Hi, my name is</div>
@@ -543,56 +507,47 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
         <a href="#video" class="btn ghost">Watch Introduction</a>
       </div>
     </section>
-
     <!-- ---------- 01 ABOUT / TRACK ALIGNMENT ---------- -->
     <section class="block" id="about">
       <h2 class="section-title"><span class="num">01</span>About &amp; Career Bridge</h2>
-
       <p class="narrative-lead">
-        I came to analytics because of my passion for data-backed insights and communicating 
+        I came to analytics because of my passion for data-backed insights and communicating
         those insights to inform actionable decisions. My undergraduate training in
         quantitative economics and statistics at NC State taught me to ask rigorous causal
         questions like why did credit delinquency move the way it did or why did informative signal
         drop out of disaster Twitter data, and then to answer them with data. The Wake Forest MSBA is
         the deliberate next step. It takes that econometric and statistical foundation and points it at business
         problems, teaching me the tools (Python, SQL, applied machine learning, stakeholder
-        communication) to provide real value to an analytics organization. I'm translating and building on 
+        communication) to provide real value to an analytics organization. I'm translating and building on
         my foundation to succeed in the corporate world.
       </p>
-
       <p>
-        Everything below maps a skill I already built in economics, statistics, research, 
+        Everything below maps a skill I already built in economics, statistics, research,
         or leadership onto the specific capability employers in data and
         business analytics are hiring for right now.
       </p>
-
       <div class="bridge-map">
         <div class="bridge-head"><div>Where I built it</div><div></div><div>Where it applies now</div></div>
-
         <div class="bridge-row">
           <div class="from"><strong>Quantitative Economics &amp; Statistics (B.S., NC State)</strong><span>First-differences regression, hypothesis testing, causal inference</span></div>
           <div class="arrow">&#8594;</div>
           <div class="to"><strong>Predictive &amp; Statistical Modeling for Business</strong><span>Applying regression and time-series methods to commercial questions like credit risk and demand</span></div>
         </div>
-
         <div class="bridge-row">
           <div class="from"><strong>Complexity, Analytics, Data Science Lab Research Assistant</strong><span>Built a CNN text classifier on Hurricane Helene Twitter data</span></div>
           <div class="arrow">&#8594;</div>
           <div class="to"><strong>Applied Machine Learning &amp; NLP</strong><span>Turning unstructured, noisy data into decision-ready signals that companies act on</span></div>
         </div>
-
         <div class="bridge-row">
           <div class="from"><strong>Presenting to the CADS Lab &amp; faculty panels</strong><span>Translated model output into plain language for all viewers</span></div>
           <div class="arrow">&#8594;</div>
           <div class="to"><strong>Stakeholder Communication &amp; Data Storytelling</strong><span>Making analysis legible to non-technical decision-makers, which is a key tool across the industry</span></div>
         </div>
-
         <div class="bridge-row">
           <div class="from"><strong>VP, Data Analytics Club &amp; Pi Kappa Phi</strong><span>Grew membership 6x; managed a $10k+ budget and 50+ events</span></div>
           <div class="arrow">&#8594;</div>
           <div class="to"><strong>Cross-Functional Project &amp; Stakeholder Management</strong><span>Running analytics projects end-to-end alongside non-analyst stakeholders</span></div>
         </div>
-
         <div class="bridge-row">
           <div class="from"><strong>Server, Sabatino's Italiano</strong><span>Managed 40+ concurrent clients nightly; ~22% avg. tip rate</span></div>
           <div class="arrow">&#8594;</div>
@@ -600,21 +555,18 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
         </div>
       </div>
     </section>
-
     <!-- ---------- 02 VIDEO INTRODUCTION ---------- -->
-<section class="block" id="video">
-  <h2 class="section-title"><span class="num">02</span>Video Introduction</h2>
-  <p>A short walkthrough of who I am, what I work on, and what I'm looking for next.</p>
-  <div class="video-frame is-video is-short" id="video-slot">
-    <iframe src="https://www.youtube.com/embed/eXC5LuiUxNc" title="Owen Baxter Edwards — Introduction" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  </div>
-</section>
-
+    <section class="block" id="video">
+      <h2 class="section-title"><span class="num">02</span>Video Introduction</h2>
+      <p>A short walkthrough of who I am, what I work on, and what I'm looking for next.</p>
+      <div class="video-frame is-video is-short" id="video-slot">
+        <iframe src="https://www.youtube.com/embed/eXC5LuiUxNc" title="Owen Edwards — Introduction" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
     <!-- ---------- 03 RESUME ---------- -->
     <section class="block" id="resume">
       <h2 class="section-title"><span class="num">03</span>Résumé</h2>
       <p>Viewable below, or grab the PDF directly.</p>
-
       <div class="resume-panel">
         <div class="resume-toolbar">
           <span class="fname">Owen_Edwards_Resume.pdf</span>
@@ -628,11 +580,9 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
         </object>
       </div>
     </section>
-
     <!-- ---------- 04 EXPERIENCE ---------- -->
     <section class="block" id="experience">
       <h2 class="section-title"><span class="num">04</span>Experience</h2>
-
       <div class="timeline">
         <div class="tl-item">
           <div class="tl-date">Aug 2024 &ndash; May 2026</div>
@@ -646,7 +596,6 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
             </ul>
           </div>
         </div>
-
         <div class="tl-item">
           <div class="tl-date">Aug 2024 &ndash; May 2026</div>
           <div>
@@ -659,7 +608,6 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
             </ul>
           </div>
         </div>
-
         <div class="tl-item">
           <div class="tl-date">Jan 2023 &ndash; May 2026</div>
           <div>
@@ -671,7 +619,6 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
             </ul>
           </div>
         </div>
-
         <div class="tl-item">
           <div class="tl-date">Apr 2025 &ndash; Dec 2025</div>
           <div>
@@ -685,107 +632,144 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
         </div>
       </div>
     </section>
-
     <!-- ---------- 05 PROJECTS / WORK EVIDENCE ---------- -->
     <section class="block" id="work">
       <h2 class="section-title"><span class="num">05</span>Selected Work</h2>
-      <p>Three analytical projects spanning disaster-response NLP, consumer-credit econometrics, and sports-policy data engineering — each built end-to-end, from data collection to stakeholder-ready findings.</p>
-
-
+      <p>Four analytical projects spanning disaster-response NLP, consumer-credit econometrics, sports-policy data engineering, and AI's effect on industry employment, each built end-to-end, from data collection to stakeholder-ready findings.</p>
       <!-- Project 1 -->
       <article class="project-card">
-        <div class="project-visual">
-          <span>Add chart / screenshot &mdash; e.g. delinquency vs. unemployment regression plot</span>
+        <div class="project-visual has-image two-up">
+          <img src="PASTE_UNEMPLOYMENT_CHART_IMAGE_HERE" alt="Scatter plot of change in unemployment rate versus change in credit card delinquency rate, with a separate regression line for each generation. The Generation Z and Millennial lines slope down much more steeply than the Baby Boomer line, showing a larger swing in delinquency per point of unemployment change.">
+          <img src="PASTE_INFLATION_CHART_IMAGE_HERE" alt="Bar chart of the estimated effect of inflation on delinquency by generation, with error bars. The bars get taller moving from Baby Boomers to Generation Z, showing the inflation effect on delinquency grows for younger generations.">
         </div>
         <div class="project-body">
           <h3>Generational Credit Card Delinquency Analysis</h3>
           <div class="project-meta">
-            <span class="tag">R</span><span class="tag">Regression</span><span class="tag">Federal Reserve Data</span>
+            <span class="tag">Python</span><span class="tag">statsmodels</span><span class="tag">First-Differenced OLS</span><span class="tag">FRED Data</span>
           </div>
-
           <div class="field-label">Context</div>
-          <p>Rising and unevenly distributed consumer debt is a live concern for lenders and regulators
-            trying to price risk and design policy across generational cohorts.</p>
-
+          <p>Credit card delinquency has climbed since its pandemic-era lows, and Federal Reserve data
+            shows Generation Z carrying the highest average delinquency rate of any generation. The open
+            question for lenders and policymakers is whether that gap comes down to financial inexperience
+            or whether younger borrowers are simply more exposed to the same macroeconomic swings everyone
+            faces.</p>
           <div class="field-label">My Role</div>
-          <p>I independently sourced and cleaned multi-year datasets from several Federal Reserve credit
-            data resources, built a first-differences regression model isolating macroeconomic drivers of
-            delinquency, and visualized results by generational cohort.</p>
-
+          <p>I independently sourced ten years of quarterly data from the Federal Reserve Banks of New
+            York and St. Louis, first-differenced every series to address non-stationarity, and built four
+            separate regressions (one per generation) of delinquency-rate changes on unemployment,
+            inflation, interest rates, and real disposable income. I then worked through why two of the
+            coefficients came back with the opposite sign from what theory predicts instead of dismissing
+            it as noise.</p>
           <div class="field-label">Outcome</div>
-          <div class="outcome">Found that <strong>unemployment rate and real disposable income</strong>
-            were statistically significant predictors of delinquency &mdash; with a materially larger
-            effect on younger generations &mdash; a finding directly relevant to consumer-credit risk
-            modeling and generational lending strategy.</div>
-
+          <div class="outcome">Found that unemployment and inflation were statistically significant
+            predictors of delinquency for every generation, real disposable income was significant for
+            three of the four (all but Baby Boomers), and interest rates were not significant for any of
+            them. The size of each effect grew steadily with generation.
+            <strong>Generation Z's delinquency rate moved almost 3 times more</strong> per point of
+            unemployment change than Baby Boomers' did (coefficients of -0.136 versus -0.046), and
+            Generation Z also carried the highest average delinquency rate of the four generations at 2.66
+            percent, compared to 0.96 percent for Baby Boomers. Both the unemployment and inflation
+            coefficients came back negative, the opposite sign standard economic theory predicts. I traced
+            that reversal to pandemic-era stimulus checks and loan forbearance, which temporarily
+            decoupled missed payments from labor-market stress, a pattern consistent with research from
+            the Federal Reserve Bank of Philadelphia.</div>
           <div class="project-links">
             <a href="#" aria-disabled="true">Write-up (add link)</a>
             <a href="#" aria-disabled="true">GitHub repo (add link)</a>
           </div>
         </div>
       </article>
-       
       <!-- Project 2 -->
       <article class="project-card">
-        <div class="project-visual">
-          <!-- CUSTOMIZE ME: replace with <img src="assets/project1.png" alt="..."> once you have a chart/screenshot -->
-          <span>Add chart / screenshot &mdash; e.g. informative-vs-noninformative tweet trend</span>
-        </div>
         <div class="project-body">
           <h3>Hurricane Helene Twitter Informativeness Classification</h3>
           <div class="project-meta">
             <span class="tag">Python</span><span class="tag">CNN / NLP</span><span class="tag">Matplotlib</span><span class="tag">Pandas</span>
           </div>
-
           <div class="field-label">Context</div>
           <p>During Hurricane Helene, emergency responders faced an overwhelming, unfiltered stream of
             social media posts, making it hard to separate actionable information from noise in real time
             &mdash; a version of the "data volume without data quality" problem that now ranks among the
             top blockers to data-driven decision-making across industries.</p>
-
           <div class="field-label">My Role</div>
           <p>As one of 3 researchers in the CADS Lab, I built and trained a Convolutional Neural Network
             (CNN) text classifier to label tweets as informative or noninformative, engineered comparative
             visualizations in Python (Matplotlib, Pandas) across the disaster's response and recovery
             phases, and co-authored the final research paper.</p>
-
           <div class="field-label">Outcome</div>
           <div class="outcome">Quantified a <strong>20 percentage-point drop</strong> in informative tweet
             share between response and recovery phases &mdash; a concrete, presentable signal disaster-response
             teams can use to recalibrate social-listening effort as a crisis unfolds.</div>
-
           <div class="project-links">
             <a href="#" aria-disabled="true">Write-up (add link)</a>
             <a href="#" aria-disabled="true">GitHub repo (add link)</a>
           </div>
         </div>
       </article>
-
       <!-- Project 3 -->
       <article class="project-card">
-        <div class="project-visual">
-          <span>Add chart / screenshot &mdash; e.g. recruiting metrics before/after NIL</span>
-        </div>
         <div class="project-body">
           <h3>NCAA NIL Policy &amp; College Football Recruiting Analysis</h3>
           <div class="project-meta">
             <span class="tag">Python</span><span class="tag">Selenium</span><span class="tag">Web Scraping</span><span class="tag">Excel</span>
           </div>
-
           <div class="field-label">Context</div>
           <p>The NCAA's 2021 Name, Image, and Likeness (NIL) policy fundamentally changed the economics of
             college athletics recruiting, but no ready-made structured dataset existed to study its effects.</p>
-
           <div class="field-label">My Role</div>
           <p>I designed and built a Selenium-based web scraper in Python to collect 2021&ndash;2025
             recruiting data from 247Sports, then cleaned and structured it into a comprehensive Excel
             dataset of key recruiting metrics &mdash; entirely self-directed, start to finish.</p>
-
           <div class="field-label">Outcome</div>
           <div class="outcome">Delivered a reusable, <strong>5-year longitudinal recruiting dataset</strong>
             enabling trend analysis of how NIL reshaped recruiting patterns &mdash; demonstrating full-stack
             data engineering skill: scraping, cleaning, and structuring data others hadn't yet assembled.</div>
-
+          <div class="project-links">
+            <a href="#" aria-disabled="true">Write-up (add link)</a>
+            <a href="#" aria-disabled="true">GitHub repo (add link)</a>
+          </div>
+        </div>
+      </article>
+      <!-- Project 4 -->
+      <article class="project-card">
+        <div class="project-visual has-image two-up">
+          <img src="PASTE_EMPLOYMENT_CHART_IMAGE_HERE" alt="Line chart of year over year employment percent change by industry from 2022 to 2025, showing the Information industry dropping to about negative 4 percent in 2024 while Health Care and the other industries stay positive.">
+          <img src="PASTE_SKILLS_CHART_IMAGE_HERE" alt="Bar chart of change in demand priority for AI and analytics skills between 2022 and 2025, with Power BI showing the largest jump of over 70 percentage points, followed by Google Analytics and learning management systems.">
+        </div>
+        <div class="project-body">
+          <h3>AI Adoption's Effect on Industry Employment and In-Demand Skills</h3>
+          <div class="project-meta">
+            <span class="tag">Python</span><span class="tag">Difference-in-Differences</span><span class="tag">pandas</span><span class="tag">BLS &amp; O*NET Data</span>
+          </div>
+          <div class="field-label">Context</div>
+          <p>As AI tools spread through the workplace, employers, job seekers, and policymakers all want
+            the same two answers. Which industries are actually losing or gaining jobs because of it, and
+            which technical skills are worth prioritizing. Getting a reliable answer means pulling multi-year
+            government labor data and running it through a research design that can separate an AI-driven
+            shift from ordinary economic noise.</p>
+          <div class="field-label">My Role</div>
+          <p>As project lead of an eight-person research team in NC State's Data Analytics Club, I built the
+            full analytical pipeline behind the project. I cleaned and merged four years of Bureau of Labor
+            Statistics data across five NAICS industries into a single panel dataset of employment, wages,
+            and establishment counts, and separately normalized over 60,000 raw O*NET technology-skill
+            entries with regex-based text cleaning so demand trends could be tracked reliably from 2022 to
+            2025. From there I built the difference-in-differences regression treating the most AI-exposed
+            industry as the treatment group with industry and year fixed effects, along with the demand-rate
+            calculations behind the skills findings. Teammates helped shape the research questions, source
+            supporting data, and present sections of the findings, but I wrote the code and ran the analysis
+            end to end.</p>
+          <div class="field-label">Outcome</div>
+          <div class="outcome">The chart on the left tells most of the story. The most AI-exposed industry
+            (Information, NAICS 51) went from employment growth of about plus 8.7 percent in 2022 to
+            averaging about negative 1.2 percent across 2023 to 2025, a roughly 10-point swing. The other
+            four industries only slid about 2 points on average over that same stretch (from roughly plus 3.9
+            percent to plus 2.0 percent), so a difference-in-differences model confirmed that industry 51's
+            decline was about <strong>8 percentage points steeper</strong> than what the other industries
+            experienced (p &lt; .001, controlling for industry and year fixed effects). Wages in that industry
+            kept rising over the same period, a pattern consistent with automation of lower-level roles paired
+            with rising pay for the higher-skill workers who remain, a trend corroborated by outside
+            labor-market data from Lightcast and the World Economic Forum that the team cited to stress-test
+            the findings.</div>
           <div class="project-links">
             <a href="#" aria-disabled="true">Write-up (add link)</a>
             <a href="#" aria-disabled="true">GitHub repo (add link)</a>
@@ -793,13 +777,11 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
         </div>
       </article>
     </section>
-     
     <!-- ---------- 06 CONTACT ---------- -->
     <section class="block" id="contact">
       <h2 class="section-title"><span class="num">06</span>Contact</h2>
       <p>Open to data analyst, business analyst, and analytics-consulting roles &amp; internships.
         The fastest way to reach me is email or LinkedIn.</p>
-
       <div class="contact-row">
         <a class="contact-card" href="mailto:edwao26@wfu.edu">
           <span class="icon"><svg viewBox="0 0 24 24"><path d="M2 5.5A1.5 1.5 0 0 1 3.5 4h17A1.5 1.5 0 0 1 22 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-17A1.5 1.5 0 0 1 2 18.5v-13zm2.2.2 7.8 5.6 7.8-5.6H4.2zm15.6 1.55-7.55 5.42a1 1 0 0 1-1.16 0L4.2 7.25V18h15.6V7.25z"/></svg></span>
@@ -815,23 +797,18 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
         </a>
       </div>
     </section>
-
     <footer class="site-footer">
       &copy; <span id="year"></span> Owen Baxter Edwards &middot; Built with HTML, CSS &amp; JS &middot; Hosted on GitHub Pages
     </footer>
-
   </div>
 </main>
-
 <button class="to-top" id="to-top" aria-label="Back to top">
   <svg viewBox="0 0 24 24"><path d="M12 4l-8 8h5v8h6v-8h5z"/></svg>
 </button>
-
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
-
   // ---- Mobile nav toggle ----
   const toggleBtn = document.getElementById('nav-toggle-btn');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -844,13 +821,11 @@ document.addEventListener('DOMContentLoaded', () => {
       a.addEventListener('click', () => mobileMenu.classList.remove('open'));
     });
   }
-
   // ---- Scroll-spy on top nav ----
   const navLinks = Array.from(document.querySelectorAll('.nav-links a, #mobile-menu a'));
   const sections = Array.from(new Set(navLinks.map(l => l.getAttribute('href'))))
     .map(href => document.querySelector(href))
     .filter(Boolean);
-
   if ('IntersectionObserver' in window && sections.length) {
     const setActive = (id) => {
       navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${id}`));
@@ -862,7 +837,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { rootMargin: '-20% 0px -65% 0px', threshold: 0 });
     sections.forEach(s => observer.observe(s));
   }
-
   // ---- Back to top ----
   const toTop = document.getElementById('to-top');
   if (toTop) {
@@ -872,7 +846,6 @@ document.addEventListener('DOMContentLoaded', () => {
     toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
   }
 });
-
 </script>
 </body>
 </html>
