@@ -602,41 +602,13 @@ footer.site-footer { padding: 2.5rem 0 4rem; text-align: center; color: var(--te
     </section>
 
     <!-- ---------- 02 VIDEO INTRODUCTION ---------- -->
-    <section class="block" id="video">
-      <h2 class="section-title"><span class="num">02</span>Video Introduction</h2>
-      <p>A short walkthrough of who I am, what I work on, and what I'm looking for next.</p>
-
-      <!-- ============================================================
-           CUSTOMIZE ME — SWAP IN YOUR VIDEO:
-
-           Option A (YouTube/Vimeo embed) — replace this whole <div class="video-frame">
-           block with:
-             <div class="video-frame is-video">
-               <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
-                       title="Owen Edwards — Introduction" allowfullscreen></iframe>
-             </div>
-
-           Option B (self-hosted mp4) — add your file to /assets (e.g. assets/intro.mp4)
-           then replace this block with:
-             <div class="video-frame is-video">
-               <video controls poster="assets/video-poster.jpg">
-                 <source src="assets/intro.mp4" type="video/mp4">
-               </video>
-             </div>
-           ============================================================ -->
-      <div class="video-frame" id="video-slot">
-        <div class="placeholder-copy">
-          <div class="play-badge">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <strong>Video introduction — coming soon</strong>
-          <small>Replace this block in index.html once your intro video is recorded</small>
-        </div>
-      </div>
-      <p class="video-hint">To add your video later: open <code>index.html</code>, find the
-        <code>id="video-slot"</code> block, and follow the instructions left in the HTML comment
-        directly above it (YouTube/Vimeo embed or a self-hosted file in <code>/assets</code>).</p>
-    </section>
+<section class="block" id="video">
+  <h2 class="section-title"><span class="num">02</span>Video Introduction</h2>
+  <p>A short walkthrough of who I am, what I work on, and what I'm looking for next.</p>
+  <div class="video-frame is-video is-short" id="video-slot">
+    <iframe src="https://www.youtube.com/embed/eXC5LuiUxNc" title="Owen Baxter Edwards — Introduction" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</section>
 
     <!-- ---------- 03 RESUME ---------- -->
     <section class="block" id="resume">
